@@ -4,6 +4,23 @@ import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import AllChem, Descriptors
 
+def get_feature_array(mols):
+    """
+    Return an pd.DataFrame of molecule properties given an array (or array-like) of molecule objects
+
+    Parameters
+    ----------
+    mols: array-like, array of molecule objects
+    
+    Returns
+    ----------
+    mol_features: pd.DataFrame of molecule features
+    """
+    entries = [get_predictors(mol) for mol in  mols]
+    mol_features = pd.DataFrame(data=entries, dtype=float)
+    return mol_features
+
+    
 def get_predictors(mol):
     """Return a dictionary of properties of an RDKit molecule object to be used as model predictors"""
     
@@ -24,7 +41,7 @@ def get_predictors(mol):
 
 def get_aromatic_proportion(mol):
     """Return the calculated aromatic proportion of a molecule"""
-    
+
     are_aromatic = sum([mol.GetAtomWithIdx(i).GetIsAromatic() for i in range(mol.GetNumAtoms())])
     are_heavy = Descriptors.HeavyAtomCount(mol)
     return are_aromatic / are_heavy
