@@ -24,6 +24,7 @@ def get_predictors(mol):
 
 def get_aromatic_proportion(mol):
     """Return the calculated aromatic proportion of a molecule"""
+    
     are_aromatic = sum([mol.GetAtomWithIdx(i).GetIsAromatic() for i in range(mol.GetNumAtoms())])
     are_heavy = Descriptors.HeavyAtomCount(mol)
     return are_aromatic / are_heavy
