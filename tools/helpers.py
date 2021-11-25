@@ -1,3 +1,5 @@
+import pickle
+
 import numpy as np
 import pandas as pd
 
@@ -45,3 +47,16 @@ def get_aromatic_proportion(mol):
     are_aromatic = sum([mol.GetAtomWithIdx(i).GetIsAromatic() for i in range(mol.GetNumAtoms())])
     are_heavy = Descriptors.HeavyAtomCount(mol)
     return are_aromatic / are_heavy
+
+
+def save(obj, filepath):
+    """Write an object to a PKL file at `filepath`"""
+    with open(filepath, 'wb') as pkl:
+        pickle.dump(obj, filepath)
+    
+def load(filepath):
+    """Return a pickled object at `filepath`"""
+    pkl = open(filepath, 'rb')
+    obj = pickle.load(pkl)
+    pkl.close()
+    return obj
