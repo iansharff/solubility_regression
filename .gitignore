@@ -6,10 +6,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-/.DS_Store
+# Private/Copyright Information
+*/.DS_Store
+/papers
 
-# Images
+# Images and raw data
 images/molecules/
+data/raw_data
 
 # Scratch Files
 /Untitled.ipynb
