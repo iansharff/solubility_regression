@@ -10,3 +10,7 @@ __pycache__/
 
 # Images
 images/molecules/
+
+# Scratch Files
+/Untitled.ipynb
+/scratch*.py
