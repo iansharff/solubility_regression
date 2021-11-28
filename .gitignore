@@ -1,18 +1,18 @@
-/.ipynb_checkpoints
-/.vscode
-/Untitled.ipynb
+.ipynb_checkpoints
+.vscode
+Untitled*.ipynb
 
 __pycache__/
 *.py[cod]
 *$py.class
 
 # Private/Copyright Information
-*/.DS_Store
-/papers
+.DS_Store
+papers/*
 
 # Images and raw data
 images/molecules/
-data/raw_data
+data/raw_data/wang.xls
 
 # Scratch Files
 /Untitled.ipynb
