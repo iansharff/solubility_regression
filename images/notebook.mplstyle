@@ -1,0 +1,29 @@
+### FIGURE
+figure.facecolor: white
+figure.dpi: 100
+figure.titlesize: large
+figure.titleweight: bold
+figure.figsize: 8, 6
+
+### AXES
+
+axes.grid: False
+axes.facecolor: white
+axes.titlesize : large
+axes.titleweight: bold
+axes.labelsize : medium
+axes.labelweight: bold
+axes.prop_cycle: cycler('color', ['maroon', 'tomato', 'sandybrown', 'goldenrod', 'olive', 'darkcyan', 'midnightblue', 'rebeccapurple', 'darkmagenta', 'mediumorchid'])
+
+### LINES
+lines.linewidth : 1.5
+
+
+### FONT
+font.family: serif
+font.sans-serif: Times New Roman
+
+### TICKS
+xtick.labelsize : 8
+ytick.labelsize : 8
+
