@@ -1,3 +1,5 @@
+<img src="images/drawings/header.png">
+
 # Predicting Solubilities from Molecular Structure for Drug Discovery
 Ian Sharff
 ## Table of Contents
